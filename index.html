@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>mask_map</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css"/>
+    <link href="css/all.css" rel="stylesheet"/>
+  </head>
+  <body>
+    <div class="messageBox" id="messageBox"></div>
+    <input id="switchCollapse" type="checkbox"/>
+    <div class="sidebar">
+      <label class="collapse" for="switchCollapse"><i class="fas fa-angle-left left"></i><i class="fas fa-angle-right right"></i></label>
+      <div class="top">
+        <div class="source">資料來源：衛福部</div>
+        <div class="locate" id="locate"><i class="fas fa-crosshairs positionIcon"></i></div>
+        <div class="day">
+          <div class="date" id="date"></div>
+          <div class="week" id="week"></div>
+        </div>
+        <div class="info">
+          身分證末碼為<span id="info"></span>可購買<a class="far fa-question-circle questionIcon" href="https://www.fda.gov.tw/upload/major/%E5%8F%A3%E7%BD%A9%E5%AF%A6%E5%90%8D%E5%88%B6QA_0304(%E6%B0%91%E7%9C%BE%E7%89%88).pdf" target="_blank"></a></div>
+        <div class="search">
+          <input id="query" type="text" placeholder="搜尋縣市、地區或街道"/><i class="fas fa-search searchIcon" id="search"></i>
+        </div>
+        <div class="option" id="option">
+          <div class="type current" data-type="all">所有</div>
+          <div class="type" data-type="adult">成人</div>
+          <div class="type" data-type="child">兒童</div>
+        </div>
+      </div>
+      <div class="bottom" id="cardData"></div>
+    </div>
+    <div class="map" id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js"></script>
+    <script src="./js/all.js"></script>
+  </body>
+</html>
