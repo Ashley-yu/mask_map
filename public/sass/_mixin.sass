@@ -1,0 +1,12 @@
+@mixin size($width,$height)
+  width: $width
+  height: $height
+
+@mixin mobile()
+  @media screen and (max-width: 720px)
+    @content
+
+@mixin flex($justify-content: center, $align-items: center)
+  display: flex
+  justify-content: $justify-content
+  align-items: $align-items

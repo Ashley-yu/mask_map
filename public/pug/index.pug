@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title mask_map
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css")
+        link(rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css")
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.css")
+        link(href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/MarkerCluster.Default.css")
+        link(href="css/all.css" rel="stylesheet")
+    body
+        .messageBox#messageBox
+        input#switchCollapse(type="checkbox")
+        .sidebar
+            label.collapse(for="switchCollapse")
+                i.fas.fa-angle-left.left
+                i.fas.fa-angle-right.right
+            .top
+                .source 資料來源：衛福部
+                .locate#locate
+                    i.fas.fa-crosshairs.positionIcon
+                .day
+                    .date#date
+                    .week#week
+                .info 身分證末碼為
+                    |
+                    span#info
+                    | 可購買
+                    a.far.fa-question-circle.questionIcon(href="https://www.fda.gov.tw/upload/major/%E5%8F%A3%E7%BD%A9%E5%AF%A6%E5%90%8D%E5%88%B6QA_0304(%E6%B0%91%E7%9C%BE%E7%89%88).pdf" target="_blank")
+                .search
+                    input#query(type="text" placeholder="搜尋縣市、地區或街道")
+                    i.fas.fa-search.searchIcon#search
+                .option#option
+                    .type.current(data-type='all') 所有
+                    .type(data-type='adult') 成人
+                    .type(data-type='child') 兒童
+            .bottom#cardData
+        .map#map
+
+        script(src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.4.1/leaflet.markercluster.js")
+        script(src="./js/all.js")

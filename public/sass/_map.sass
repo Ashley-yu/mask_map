@@ -1,0 +1,35 @@
+.marker-cluster
+  background-clip: padding-box
+  border-radius: 20px
+  background-color: rgba($cluster-color, 0.6)
+.marker-cluster div
+  width: 30px
+  height: 30px
+  margin-left: 5px
+  margin-top: 5px
+  text-align: center
+  border-radius: 15px
+  background-color: rgba($cluster-color, 0.8)
+.marker-cluster span
+  line-height: 30px
+  color: $white-color
+
+.leaflet-popup-content-wrapper
+  width: 250px
+.leaflet-popup-content
+  margin: 10px 15px
+  .mask,.content
+    max-width: 220px
+  .maskNum
+    padding: 8px 18px
+    margin: 3px
+
+.marker
+  color: $gray-color
+  font-size: 34px
+  text-shadow: 3px 3px 8px rgba($black-color,0.8)
+  -webkit-text-stroke: 2px $black-color
+  &.adult
+    color: $primary-color
+  &.child
+    color: $secondary-color
