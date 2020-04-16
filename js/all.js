@@ -38,7 +38,6 @@ function getData() {
 const getInfo = () => {
     const date = document.querySelector('#date');
     const week = document.querySelector('#week');
-    const info = document.querySelector('#info');
 
     const today = new Date();
     const day = today.getDay();
@@ -58,23 +57,6 @@ const getInfo = () => {
 
     // 取得星期 -----
     week.textContent = `星期${week_list[day]}`;
-
-    // 可購買資訊 -----
-    switch (day) {
-        case 1:
-        case 3:
-        case 5:
-            info.textContent = ' 1,3,5,7,9 ';
-            break;
-        case 2:
-        case 4:
-        case 6:
-            info.textContent = ' 0,2,4,6,8 ';
-            break;
-        default:
-            info.textContent = '任何數';
-            break;
-    }
 }
 
 // 定位
