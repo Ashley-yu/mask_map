@@ -33,5 +33,5 @@ https://ashley-yu.github.io/mask_map/
 ## API
 [藥局及衛生所口罩即時庫存 geojson by kiang](https://raw.githubusercontent.com/kiang/pharmacies/master/json/points.json?fbclid=IwAR2a8jIlM3rzICRgHy9opAJsus3k2V8ez57L5m-2O34LcwaV2HNAN6gBsAw)
 
-## 使用介紹
+## 內容介紹
 ![maskmap](https://user-images.githubusercontent.com/57936181/84482249-f9f1d180-acc9-11ea-976e-34712a77a476.gif)
